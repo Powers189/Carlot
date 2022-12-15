@@ -295,7 +295,7 @@ int main(int argc, char *argv[])
         EventList.push(Event(nextArrival(0, I, rando), "Demand Event", 0.0));
 
         // Run until the sim ends
-        while (simClock <= end_time)
+        while (simClock <= end_time && !EventList.empty())
         {
             Event event = EventList.top();
             EventList.pop();
